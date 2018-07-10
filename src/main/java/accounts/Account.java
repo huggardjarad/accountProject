@@ -7,7 +7,8 @@ public class Account {
 		
 		private String accountNumber;
 		
-		public Account() {
+		public
+		Account() {
 			this.firstName = "";
 			this.lastName = "";
 			this.accountNumber = "";

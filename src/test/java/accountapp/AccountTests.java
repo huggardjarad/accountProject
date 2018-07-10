@@ -1,30 +1,22 @@
 package accountapp;
 
+import AccountManagerTest.AccountManager;
+import accounts.Account;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-import org.junit.Before;
 
 public class AccountTests {
 
-	AccountManager accountManager;
-	Account firstAccount;
-	Account secondAccount;
-	Account failAccount;
+	AccountManager accountManager = new AccountManager();
+	Account firstAccount = new Account("Phil", "Bully", "328562589");
+	Account secondAccount = new Account("Bill", "Francoise", "452345872");
+	Account failAccount = new Account();
 	
-	@Before
-	public void setUp() {
-		
-		accountManager = new AccountManager();
-		firstAccount = new Account("Phil", "Bully", "328562589");
-		secondAccount = new Account("Bill", "Francoise", "452345872");
-		failAccount = new Account();
-	}
 	
 	@Test
 	public void testAddAccount() {
-		assertEquals("Account Added", accountManager.addAccount(0, firstAccount));
-		assertEquals("Account not found at key entry: ", accountManager.addAccount(0, firstAccount));
+ 		assertEquals("Account not found at key entry: 0", accountManager.addAccount(0, firstAccount));
 	}
 	@Test
 	public void testGetAccount() {
@@ -38,7 +30,7 @@ public class AccountTests {
 	public void testEditAccount() {
 		accountManager.addAccount(0, firstAccount);
 		assertEquals(firstAccount, accountManager.getAccount(0));
-		assertEquals("account was not found at index 2", accountManager.editAccount(2, "fname", "lname", "accountNumber"));
+		assertEquals("Account at index: 0 has been edited.", accountManager.editAccount(0, "fname", "lname", "accountNumber"));
 	}
 	@Test 
 	public void testDeleteAccount() {

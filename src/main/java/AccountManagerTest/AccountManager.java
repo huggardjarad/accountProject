@@ -14,10 +14,10 @@ public class AccountManager {
 			return "Invalid Key Entry";
 		}
 		else {
+			accountMap.put(key, account);
 			return "Account not found at key entry: " + key;
 		}
 	}
-	
 	public Account getAccount(int key) {
 		
 		if (accountMap.containsKey(key)) {
@@ -27,8 +27,7 @@ public class AccountManager {
 			Account emptyAccount = new Account();
 			return emptyAccount;
 		}
-	}
-	
+	}	
 	public String deleteAccount(int key) {
 		if(accountMap.containsKey(key)) {
 			 accountMap.remove(key);
