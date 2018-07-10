@@ -1,6 +1,7 @@
 package AccountManagerTest;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import AccountBlockedException.AccountBlockedException;
 import accounts.Account;
@@ -59,6 +60,16 @@ public class AccountManager {
 			return accountMap.get(key);
 		}
 		
+	}
+	public int searchForFirstName(String firstName) {
+		int count = 0;
+		for(Map.Entry<Integer, Account> entry : accountMap.entrySet()) {
+			
+			if(entry.getValue().getFirstName().equals(firstName)) {
+				count ++;
+			}
+		}
+		return count;
 	}
 	
 }

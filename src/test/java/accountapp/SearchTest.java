@@ -29,9 +29,9 @@ public class SearchTest {
 			manager.addAccount(4, account5);
 			manager.addAccount(5, account6);
 			
-			 AssertEquals(3,manager.searchForFirstName("Bill"));
-			 AssertEquals(2,manager.searchForFirstName("Jim"));
-			 AssertEquals(1,manager.searchForFirstName("Ben"));
+			 assertEquals(3,manager.searchForFirstName("Bill"));
+			 assertEquals(2,manager.searchForFirstName("Jim"));
+			 assertEquals(1,manager.searchForFirstName("Ben"));
 		}
 	}
 
