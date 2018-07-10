@@ -2,6 +2,7 @@ package AccountManagerTest;
 
 import java.util.HashMap;
 
+import AccountBlockedException.AccountBlockedException;
 import accounts.Account;
 
 public class AccountManager {
@@ -17,6 +18,7 @@ public class AccountManager {
 			accountMap.put(key, account);
 			return "Account not found at key entry: " + key;
 		}
+		
 	}
 	public Account getAccount(int key) {
 		
@@ -47,6 +49,16 @@ public class AccountManager {
 		else { 
 			return "Account was not found";
 		}
+	}
+	public Account blockedAccountCheck(int key) throws AccountBlockedException{
+		
+		if (accountMap.get(key).getAccountNumber().equals("123456")) {
+			throw new AccountBlockedException("This account has been blocked");
+		}
+		else {
+			return accountMap.get(key);
+		}
+		
 	}
 	
 }
