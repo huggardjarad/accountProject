@@ -1,0 +1,13 @@
+.classpath
+.project
+/.idea/
+/target/
+/log.txt
+/bin/
+
+*.class
+/.settings/
+*.jar
+*.war
+*.ear
+hs_err_pid*
