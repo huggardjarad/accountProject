@@ -1,4 +1,4 @@
-package accounts;
+package accountapp;
 
 public class Account {
 		private String firstName;
@@ -17,6 +17,7 @@ public class Account {
 			this.lastName = lastName;
 			this.accountNumber = accountNumber;
 		}
+		
 		
 		public String getFirstName() {
 			return firstName;
