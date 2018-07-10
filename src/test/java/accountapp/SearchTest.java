@@ -2,8 +2,6 @@ package accountapp;
 
 import AccountManagerTest.AccountManager;
 import accounts.Account;
-import com.qa.app.App;
-import AccountBlockedException.AccountBlockedException;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
